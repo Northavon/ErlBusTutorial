@@ -1,0 +1,18 @@
+{application, ebus, [
+  {description, "Simple, Distributed and Scalable PubSub Message Bus written in Erlang"},
+  {vsn, "0.2.2"},
+  {id, "ebus"},
+  {modules, []},
+  {registered, []},
+  {applications, [kernel, stdlib]},
+  {mod, {ebus, []}},
+  {env, []},
+  {maintainers, ["Carlos Andres Bolanos"]},
+  {licenses, ["MIT"]},
+  {build_tools, ["rebar3", "make"]},
+  {pkg_name, "erlbus"},
+  {links, [
+    {"GitHub", "https://github.com/cabol/erlbus"},
+    {"Blog Post", "http://cabol.github.io/posts/2016/01/13/distributed-scalable-pubsub-in-erlang.html"}
+  ]}
+]}.
