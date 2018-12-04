@@ -1,0 +1,45 @@
+body {
+	font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+	font-family: 'Raleway', sans-serif;
+}
+
+.sendButton {
+	background-color: blue;
+	color: white;
+	border-radius: 0px;
+}
+
+.header {
+	font-weight: bold;
+}
+
+.input-container {
+	background-color: #e8e8e8;
+	padding: 10px 0 10px 0;
+}
+
+.chat-input {
+	width: 100%;
+	border-radius: 20px;
+	border: none;	
+	-webkit-appearance:none;
+	margin: 0 16px;
+	padding: 4px 16px;
+}
+
+.send-btn {
+	width: 100%;
+	margin-right: 16px;
+	padding: 4px 0;
+}
+
+.chat-form {
+	margin-bottom: 0px;
+}
+
+.submit-field-container {
+	padding-right: 32px;
+}
