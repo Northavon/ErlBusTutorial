@@ -14,16 +14,41 @@ h1 {
 
 .header {
 	font-weight: bold;
+	margin-bottom: 32px;
 }
 
 .connect-btn {
-	border: 1px solid #999;
-	padding: 2px 16px;
+	padding: 8px 24px;
+	color: white;
+	background-color: #12d122;
+	border-radius:8px;
+}
+
+.container {
+	margin-top: 32px;
 }
 
 .input-container {
 	background-color: #e8e8e8;
 	padding: 10px 0 10px 0;
+}
+
+.message-container {
+	background-color: white;
+	padding: 16px 16px;
+	border-radius: 16px;
+	margin-bottom: 16px;
+}
+
+.message {
+	margin-bottom: 0px;
+	color: #666;
+}
+
+.sender {
+	color: #92433a;
+	font-weight: bold;
+	margin-bottom: 4px;
 }
 
 .chat-input {
@@ -35,10 +60,16 @@ h1 {
 	padding: 4px 16px;
 }
 
+.chat-input::-webkit-input-placeholder { 
+  	color: #ccc;
+}
+
 .send-btn {
 	width: 100%;
 	margin-right: 16px;
 	padding: 4px 0;
+	color: white;
+	background-color: #12d122;
 }
 
 .chat-form {
