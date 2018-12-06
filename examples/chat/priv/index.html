@@ -60,7 +60,10 @@
       function sendMessage() {
         if(websocket.readyState == websocket.OPEN){
           var txt = jQuery("#textToSend").val();
-          websocket.send(txt);
+          var timestamp = new Date();
+          var hour = timestamp.getHours();
+          var min = timestamp.getMinutes();
+           websocket.send(JSON.stringify({txt: txt, timestamp: hour + "." + min}));
           jQuery("#textToSend").val("");
         } else {
            showAlert('<span style="color: red;">ERROR: websocket is not ready</span>');
@@ -68,13 +71,14 @@
       };
 
       function showMessage(data) {
-        jQuery('#chatContainer').append('<div class="message-container"> <p class="sender">' + data.sender + '</p> <p class="message">' + data.msg + '</p></div>');
+        jQuery('#chatContainer').append('<div class="message-container"> <p class="sender">' + data.sender + '</p> <p class="message">' + data.msg + '</p></div> <div class="timestamp-container" style="text-align:right;"><p class="timestamp" style="color: #222;">' + data.timestamp + '</p></div>' );
       };
 
       function showAlert(txt) {
         jQuery("#alertContainer").html(txt);
         jQuery("#alertContainer").show();
       }
+
       </script>
       <style>
         #chatContainer {

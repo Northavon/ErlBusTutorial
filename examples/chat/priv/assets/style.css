@@ -6,6 +6,14 @@ h1 {
 	font-family: 'Raleway', sans-serif;
 }
 
+div.timestamp-container {
+	text-align: right;
+}
+
+.timestamp {
+	color: #222;
+}
+
 .sendButton {
 	background-color: blue;
 	color: white;

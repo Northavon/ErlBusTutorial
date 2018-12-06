@@ -29,8 +29,11 @@ websocket_handle(_Data, Req, State) ->
   {ok, Req, State}.
 
 websocket_info({message_published, {Sender, Msg}}, Req, State) ->
-  {Username, _} = cowboy_req:binding(username, Req),
-  {reply, {text, jiffy:encode({[{sender, Sender}, {msg, Msg}]})}, Req, State};
+  Payload = jiffy:decode(Msg, [return_maps]),
+  Timestamp = maps:get(<<"timestamp">>, Payload),
+  Message = maps:get(<<"txt">>, Payload),
+  {reply, {text, jiffy:encode({[{sender, Sender}, {msg, Message}, {timestamp, Timestamp}]})}, Req, State};
+
 websocket_info(_Info, Req, State) ->
   {ok, Req, State}.
 
